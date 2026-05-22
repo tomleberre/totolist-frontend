@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TotoList — Connexion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <form id="formPrenom">
-    <input type="text" id="prenom" placeholder="Entrez votre prénom">
-    <button type="submit">Voir la liste des tâches</button>
-</form>
+    <div class="login-page">
+        <div class="login-card">
+            <div class="login-card__logo">T</div>
+            <h1 class="login-card__title">Bienvenue</h1>
+            <p class="login-card__subtitle">Entrez votre prénom pour accéder à vos tâches.</p>
+            <form id="formPrenom" class="form">
+                <div class="form-group">
+                    <label class="form-label" for="prenom">Votre prénom</label>
+                    <input
+                        type="text"
+                        id="prenom"
+                        class="input"
+                        placeholder="ex. Thomas"
+                        autocomplete="given-name"
+                        autofocus
+                    >
+                </div>
+                <button type="submit" class="btn btn--primary btn--full btn--lg">
+                    Accéder à mes tâches
+                </button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

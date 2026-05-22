@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TotoList — Mes tâches</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="taches.js" defer></script>
 </head>
-
 <body>
-    <h1>Liste des tâches</h1>
-    <div id="listeTaches"></div>
-    <a href="stats.html">Voir les statistiques</a>
-</body>
 
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                <span class="navbar__logo">T</span>
+                TotoList
+            </a>
+            <nav class="navbar__nav">
+                <a href="taches.html" class="navbar__link active">Tâches</a>
+                <a href="stats.html" class="navbar__link">Statistiques</a>
+            </nav>
+        </div>
+    </nav>
+
+    <main class="page">
+        <div class="container container--md">
+            <div class="page__header">
+                <h1 class="page__title">Mes tâches</h1>
+                <p class="page__subtitle" id="welcomeMsg"></p>
+            </div>
+
+            <div class="task-list__toolbar">
+                <span id="taskCount" class="badge badge--default"></span>
+                <a href="stats.html" class="btn btn--ghost btn--sm">Statistiques →</a>
+            </div>
+
+            <div id="listeTaches" class="task-list animate-list"></div>
+        </div>
+    </main>
+
+</body>
 </html>

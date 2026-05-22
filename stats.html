@@ -1,16 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <script src="stats.js" defer></script>
+    <title>TotoList — Statistiques</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="stats.js" defer></script>
 </head>
 <body>
-  <h1>Statistiques</h1>
-<p>Total des tâches : <span id="total"></span></p>
-<p>Tâches terminées : <span id="terminees"></span></p>
-<p>Tâches à faire : <span id="afaire"></span></p>  
-<a href="taches.html">Retour aux tâches</a>
+
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                <span class="navbar__logo">T</span>
+                TotoList
+            </a>
+            <nav class="navbar__nav">
+                <a href="taches.html" class="navbar__link">Tâches</a>
+                <a href="stats.html" class="navbar__link active">Statistiques</a>
+            </nav>
+        </div>
+    </nav>
+
+    <main class="page">
+        <div class="container container--md">
+
+            <div class="page__header">
+                <h1 class="page__title">Statistiques</h1>
+                <p class="page__subtitle">Vue d'ensemble de votre productivité</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-card__label">Total des tâches</div>
+                    <div class="stat-card__value" id="total">—</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__label">Terminées</div>
+                    <div class="stat-card__value text-success" id="terminees">—</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__label">À faire</div>
+                    <div class="stat-card__value text-warning" id="afaire">—</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <p class="chart-container__title">Répartition des tâches</p>
+                <canvas id="monGraphique" style="max-height: 260px;"></canvas>
+            </div>
+
+            <div class="mt-6">
+                <a href="taches.html" class="btn btn--secondary">← Retour aux tâches</a>
+            </div>
+
+        </div>
+    </main>
+
 </body>
 </html>

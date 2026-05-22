@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TotoList — Détail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="detail.js" defer></script>
 </head>
 <body>
-    <div id="detailTache"></div>
+
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                <span class="navbar__logo">T</span>
+                TotoList
+            </a>
+            <nav class="navbar__nav">
+                <a href="taches.html" class="navbar__link">Tâches</a>
+                <a href="stats.html" class="navbar__link">Statistiques</a>
+            </nav>
+        </div>
+    </nav>
+
+    <main class="page">
+        <div class="container container--sm">
+            <a href="taches.html" class="detail-back">← Retour aux tâches</a>
+            <div id="detailTache"></div>
+        </div>
+    </main>
+
 </body>
 </html>
