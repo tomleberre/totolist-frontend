@@ -4,7 +4,7 @@ if (prenom && welcomeEl) {
     welcomeEl.textContent = `Bonjour ${prenom} \u{1F44B}`
 }
 
-fetch("http://localhost:3000/todos")
+fetch("https://totolist-backend-phi.vercel.app/todos")
     .then(response => response.json())
     .then(taches => {
         let listeTaches = document.getElementById("listeTaches")

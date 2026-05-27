@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/todos")
+fetch("https://totolist-backend-phi.vercel.app/todos")
     .then(response => response.json())
     .then(taches => {
         let todolist = taches[0].todolist
